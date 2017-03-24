@@ -1,35 +1,53 @@
-> ##Team Project Instructions
->
-> 1. Design your Console user interface using the appropriate layout and screen 
->    placement to be efficient and effective for the operator grading the 
->    examinations. Your project MUST include a Menu with AT LEAST these options.
->             >STATE DMV DRIVERS EXAMINATION
->             >-----------------------------
->             >1. Enter Applicant Data File Name
->             >2. Grade Applicant Examination
->             >3. Display Applicant Results
->             >4. Exit the Program
->             >-----------------------------
->             >Enter Option 1, 2, 3, or 4:
+##Team Project Instructions
+
+1. Design your Console user interface using the appropriate layout and screen 
+   placement to be efficient and effective for the operator grading the 
+   examinations. Your project MUST include a Menu with AT LEAST these options.
+            STATE DMV DRIVERS EXAMINATION
+            -----------------------------
+            1. Enter Applicant Data File Name
+            2. Grade Applicant Examination
+            3. Display Applicant Results
+            4. Exit the Program
+            -----------------------------
+            Enter Option 1, 2, 3, or 4:
             
-> 2. *Option 1:* The DMV examiner will use the KEYBOARD (and the 'C' scanf() function)
->		 to enter the FILENAME containing each driver license applicant's exam answers
-> 	 (Hint: Place ALL data files into a Folder named Datafiles located in the same
->		 directory as the project's executable (.exe) and source code (.asm) files. That
-> 	 will make the 'path' to those files easier to specift in your program code by 
->		 simply using ".\\Datafiles\\" + the concatenated string FILENAME value entered
->		 by the DMV examiner in Menu Option 1). Make appropriate SCREEN CAPTURES as the 
->		 application is running to demonstrate functionality of your final Menu design 
-> 	 and this option's operation.
-> 3. *Option 3:* The completed DMV examination grading application will perform the
-> 	 following operations.
-> 		 						>a) *DISPLAY* the following *HEADING centered* under the Menu area
->									>	  on the console screen using the 'C' printf() function.
->									>   <blank>
->									>		<blank>
->									>		Applicant  xxxxyyy.dat
->									>   <blank>
->									>      DMV     APPLICANT
->									>   -----------------------
->									>   <blank>
->									>   <blank>
+2. *Option 1:* The DMV examiner will use the KEYBOARD (and the 'C' scanf() function)
+	 to enter the FILENAME containing each driver license applicant's exam answers
+ 	 (Hint: Place ALL data files into a Folder named Datafiles located in the same
+	 directory as the project's executable (.exe) and source code (.asm) files. That
+	 will make the 'path' to those files easier to specift in your program code by 
+	 simply using ".\\Datafiles\\" + the concatenated string FILENAME value entered
+	 by the DMV examiner in Menu Option 1). Make appropriate SCREEN CAPTURES as the 
+	 application is running to demonstrate functionality of your final Menu design 
+	 and this option's operation.
+3. *Option 2:* The completed DMV examination grading application will perform the
+ 	 following operations
+                        
+                        a) *DISPLAY* the following *HEADING centered* under the Menu area
+	               on the console screen using the 'C' printf() function.
+                        <blank>
+                        <blank>
+                        Applicant  xxxxyyy.dat
+                        <blank>
+                              DMV     APPLICANT
+                           -----------------------
+                        <blank>
+                        <blank>
+                        
+                        b) *OPEN BOTH* the *CORRECT ANSWERS* data file and the *CURRENT 
+                           APPLICANT'S* data file. *READ* the current answer record from
+                           each of those data files into the respective string variables.
+                           COMPARE the two answers. If they *MATCH ADD 1* to the counter
+                           variable for the *CORRECT* answers.
+                        
+                        c) Use the 'C' printf() function to *DISPLAY* the *CORRECT DMV 
+                           answer AND the APPLICANT'S answer* like this, if the applicant's
+                           answer is *_CORRECT_*.
+                                                A           A
+                           *OR* like this, if the applicant's answer is *_INCORRECT_*.
+                                                A           D x         <-- x means incorrect
+                        d) REPEAT *Step 3b* and *Step 3c* until BOTH data files achieve the 
+                           *EOF* condition. Then, make a *SCREEN CAPTURE* to demonstrate the
+                           results for *THIS* applicant.
+4) *Option 3*: 
