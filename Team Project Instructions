@@ -50,4 +50,28 @@
                         d) REPEAT *Step 3b* and *Step 3c* until BOTH data files achieve the 
                            *EOF* condition. Then, make a *SCREEN CAPTURE* to demonstrate the
                            results for *THIS* applicant.
-4) *Option 3*: 
+4. *Option 3*: The DMV operator provides the applicants *exam result (PASS or FAIL)'*.
+   Your Team's code will implement a decision structure to determine if the *applicant
+   met the minimum number of correct answers to pass* the examination. The applicant must
+   answer *at least _15_ questions correctly in order to 'pass'*. Have the progam logic 
+   indicate "*PASS*" or "*FAIL*" akibg wutg the *_number of questions answered CORRECTLY_*
+   for the current applicant. *Your Team* will decide on the *appriate text messages and 
+   layout to use for displaying this information* on the console screen.
+   			a) Use the following alyout as an *_EXAMPLE_* for how the results might
+			   be displayed on the screen. *YOU SHOULD CREATE YOUR OWN LAYOUT AND 
+			   DISPLAY FOR THE INFORMATION* (as long as it includes the same basic
+			   information about the test results for an applicant).
+			   _DO NOT USE THIS AS YOUR OWN DESIGN_.
+			   		
+					Department of Motor Vehicles
+					 Driver's Exam for xxxxyyy
+					 
+				   You answered 99 questions, correctly.   <-- 99 is the number of correct answers.
+				   
+				Your result on this portion of the exam is: XXXX <-- Print PASS or FAIL
+				
+			b) Make a *SCREEN CAPTURE* of *_YOUR Option 3 layout_* for *EACH 
+			   applicant's results*.
+
+5. There are two applicant files, *3045WIL.dat* and *9831GRA.dat* to use. Run the 
+   program using *EACH* of these files as described in *Step 1, Step 2, and Step 3.*
