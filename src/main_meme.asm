@@ -20,9 +20,16 @@ segment .data
   opt_3_ans db "opt 3",0x0
   opt_4_ans db "Good Bye",0xa,0x0
   invalid_opt_ans db "invalid option",0x0
+  file_input db "%s",0x0
+  file_name times 16 db " "
+  test_output db "%s",0xa,0x0
+  file_mode db "r",0x0
+  error db "[ERROR] File Not Found",0xa,0x0
+
 
 segment .bss
   ans resb 1
+  file_ptr resq 1
 
 segment .text
 
@@ -30,9 +37,36 @@ segment .text
   extern system
   extern printf
   extern getchar
-  extern fflush
   extern scanf
+  extern fopen
+  extern fclose
+  extern fgetc
+  extern putchar
   extern exit
+
+_opt1:
+  push rbp
+  mov rbp,rsp
+  opt1_start:
+  lea rdi, [file_input]
+  mov rsi, file_name
+  call scanf
+  lea rdi, [file_name]
+  lea rsi, [file_mode]
+  call fopen
+  mov [file_ptr], rax
+  cmp byte [file_ptr], 0
+  jnz opt1_end
+
+  lea rdi, [error]
+  call printf
+  call _clear_buff
+  jmp opt1_start
+
+  opt1_end:
+  
+  leave
+  ret
 
 _clear_buff:
   push rbp
@@ -46,8 +80,6 @@ _clear_buff:
   mov rsp,rbp
   pop rbp
   ret
-
-
 
 
 main:
@@ -71,8 +103,7 @@ main:
     opt_1:
       cmp [ans], byte '1'
       jnz opt_2
-      lea rdi, [opt_1_ans]
-      call printf
+      call _opt1
       call _clear_buff
       call getchar
       jmp _control_loop
@@ -106,6 +137,28 @@ main:
       jmp _control_loop
   _end_control:
 
+  ; Testing output of file
+  mov r12, [file_ptr]
+  push r12            ; wrapping file pointer in a push pop
+
+  while_test:
+    mov rdi, [file_ptr]
+    call fgetc
+    cmp al, -1
+    jz end_while_test
+    mov rdi, rax
+    call putchar
+    jmp while_test
+  end_while_test:
+
+  pop r12
+
+  ; End test
+
+  mov [file_ptr], r12
+
+  mov rdi, [file_ptr]
+  call fclose
 
   xor rdi,rdi
   call exit
