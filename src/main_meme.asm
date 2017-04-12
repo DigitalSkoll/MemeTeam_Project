@@ -36,7 +36,7 @@ segment .data
   opt_4_ans db "Good Bye",0xa,0x0
   invalid_opt_ans db "invalid option",0x0
   file_input db "%s",0x0
-  file_name times 16 db 0
+  file_name times 30 db 0
   test_output db "%s",0xa,0x0
   file_mode db "r",0x0
   error db "[ERROR] File Not Found",0xa,0x0
