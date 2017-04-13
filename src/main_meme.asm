@@ -33,7 +33,6 @@ segment .data
   opt_4_ans db INDENT,"Good Bye",0xa,0x0
   invalid_opt_ans db INDENT,"invalid option",0x0
   file_input db "%s",0x0
-  ;file_name times 30 db 0
   file_mode db "r",0x0
   error db "[ERROR] File Not Found",0xa,0x0
   ans_file_name db "datafiles/Answers.txt",0
@@ -42,7 +41,7 @@ segment .data
 
 segment .bss
   ans resb 1
-  file_name resq 1
+  file_name resb 32
   file_ptr resq 1
   ans_file_ptr resq 1
   correct_char resb 1
