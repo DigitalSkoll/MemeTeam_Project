@@ -500,7 +500,7 @@
    500                                 
    501 00000054 488D0C25[00000000]      lea rcx, [error]
    502 0000005C E8(F6FFFFFF)            call printf
-   503 00000061 E8A4010000              call _clear_buff
+   503 00000061 E8A1010000              call _clear_buff
    504 00000066 EB9E                    jmp opt1_start
    505                                 
    506                                  opt1_end:
@@ -513,188 +513,187 @@
    513 0000006B 4889E5                  mov rbp, rsp
    514 0000006E 4883EC20                sub rsp, 32
    515                                 
-   516 00000072 4D31DB                  xor r11,r11
-   517 00000075 4C891C25[00000000]      mov [correct_count], r11
-   518 0000007D 4C891C25[00000000]      mov [total_count], r11
-   519 00000085 488D0C25[00000000]      lea rcx, [header]
-   520 0000008D 488D1425[00000000]      lea rdx, [file_name]
-   521 00000095 E8(F6FFFFFF)            call printf
-   522                                 
-   523 0000009A 488D0C25[00000000]      lea rcx, [ans_file_name]
-   524 000000A2 488D1425[00000000]      lea rdx, [file_mode]
-   525 000000AA E8(F6FFFFFF)            call fopen
-   526 000000AF 48890425[00000000]      mov [ans_file_ptr], rax
-   527 000000B7 803C25[00000000]00      cmp byte [ans_file_ptr], 0
-   528 000000BF 7515                    jnz opt2_next
-   529                                 
-   530 000000C1 488D0C25[00000000]      lea rcx, [error]
-   531 000000C9 E8(F6FFFFFF)            call printf
-   532 000000CE E837010000              call _clear_buff
-   533 000000D3 E9A2000000              jmp opt2_end
-   534                                  opt2_next:
-   535                                 
-   536 000000D8 4C8B2425[00000000]      mov r12, [ans_file_ptr]
-   537 000000E0 4C8B2C25[00000000]      mov r13, [file_ptr]
-   538                                 
-   539                                  opt2_while:
-   540 000000E8 488B0C25[00000000]      mov rcx, [ans_file_ptr]
-   541 000000F0 E8(F6FFFFFF)            call fgetc
-   542 000000F5 3CFF                    cmp al, -1
-   543 000000F7 7467                    jz end_opt2_while
-   544                                 
-   545 000000F9 880425[00000000]        mov [ans], al
-   546 00000100 488B0C25[00000000]      mov rcx, [file_ptr]
-   547 00000108 E8(F6FFFFFF)            call fgetc
-   548 0000010D 3CFF                    cmp al, -1
-   549 0000010F 744F                    jz end_opt2_while
-   550 00000111 3C0A                    cmp al, 0xa
-   551 00000113 74D1                    je opt2_while
-   552                                 
-   553 00000115 FE0425[00000000]        inc byte [total_count]
-   554 0000011C 380425[00000000]        cmp byte [ans], al
-   555 00000123 7408                    je opt2_correct
-   556                                 
-   557 00000125 C60425[00000000]78      mov byte [correct_char], 120
-   558 0000012D EB0D                    jmp opt2_skip_correct
-   559                                 
-   560                                  opt2_correct:
-   561 0000012F C60425[00000000]20      mov byte [correct_char], 32
-   562 00000137 FE0425[00000000]        inc byte [correct_count]
-   563                                 
-   564                                  opt2_skip_correct:
-   565 0000013E 488D0C25[00000000]      lea rcx, [cmp_fmt]
-   566 00000146 480FB61425[00000000]      movzx rdx, byte [ans]
-   567 0000014F 4989C0                  mov r8, rax
-   568 00000152 4C0FB60C25[00000000]      movzx r9, byte [correct_char]
-   569 0000015B E8(F6FFFFFF)            call printf
-   570 00000160 EB84                    jmp opt2_while
-   571                                  end_opt2_while:
+   516 00000072 C60425[00000000]00      mov byte [correct_count], 0
+   517 0000007A C60425[00000000]00      mov byte [total_count], 0
+   518 00000082 488D0C25[00000000]      lea rcx, [header]
+   519 0000008A 488D1425[00000000]      lea rdx, [file_name]
+   520 00000092 E8(F6FFFFFF)            call printf
+   521                                 
+   522 00000097 488D0C25[00000000]      lea rcx, [ans_file_name]
+   523 0000009F 488D1425[00000000]      lea rdx, [file_mode]
+   524 000000A7 E8(F6FFFFFF)            call fopen
+   525 000000AC 48890425[00000000]      mov [ans_file_ptr], rax
+   526 000000B4 803C25[00000000]00      cmp byte [ans_file_ptr], 0
+   527 000000BC 7515                    jnz opt2_next
+   528                                 
+   529 000000BE 488D0C25[00000000]      lea rcx, [error]
+   530 000000C6 E8(F6FFFFFF)            call printf
+   531 000000CB E837010000              call _clear_buff
+   532 000000D0 E9A2000000              jmp opt2_end
+   533                                  opt2_next:
+   534                                 
+   535 000000D5 4C8B2425[00000000]      mov r12, [ans_file_ptr]
+   536 000000DD 4C8B2C25[00000000]      mov r13, [file_ptr]
+   537                                 
+   538                                  opt2_while:
+   539 000000E5 488B0C25[00000000]      mov rcx, [ans_file_ptr]
+   540 000000ED E8(F6FFFFFF)            call fgetc
+   541 000000F2 3CFF                    cmp al, -1
+   542 000000F4 7467                    jz end_opt2_while
+   543                                 
+   544 000000F6 880425[00000000]        mov [ans], al
+   545 000000FD 488B0C25[00000000]      mov rcx, [file_ptr]
+   546 00000105 E8(F6FFFFFF)            call fgetc
+   547 0000010A 3CFF                    cmp al, -1
+   548 0000010C 744F                    jz end_opt2_while
+   549 0000010E 3C0A                    cmp al, 0xa
+   550 00000110 74D1                    je opt2_while
+   551                                 
+   552 00000112 FE0425[00000000]        inc byte [total_count]
+   553 00000119 380425[00000000]        cmp byte [ans], al
+   554 00000120 7408                    je opt2_correct
+   555                                 
+   556 00000122 C60425[00000000]78      mov byte [correct_char], 120
+   557 0000012A EB0D                    jmp opt2_skip_correct
+   558                                 
+   559                                  opt2_correct:
+   560 0000012C C60425[00000000]20      mov byte [correct_char], 32
+   561 00000134 FE0425[00000000]        inc byte [correct_count]
+   562                                 
+   563                                  opt2_skip_correct:
+   564 0000013B 488D0C25[00000000]      lea rcx, [cmp_fmt]
+   565 00000143 480FB61425[00000000]      movzx rdx, byte [ans]
+   566 0000014C 4989C0                  mov r8, rax
+   567 0000014F 4C0FB60C25[00000000]      movzx r9, byte [correct_char]
+   568 00000158 E8(F6FFFFFF)            call printf
+   569 0000015D EB84                    jmp opt2_while
+   570                                  end_opt2_while:
+   571                                 
    572                                 
-   573                                 
-   574 00000162 4C892C25[00000000]      mov [file_ptr], r13
-   575 0000016A 4C892425[00000000]      mov [ans_file_ptr], r12
-   576                                 
-   577 00000172 488B0C25[00000000]      mov rcx, [ans_file_ptr]
-   578 0000017A E8(F6FFFFFF)            call fclose
-   579                                 
-   580                                  opt2_end:
-   581                                 
-   582 0000017F C9                      leave
-   583 00000180 C3                      ret
-   584                                 
-   585                                 _opt3:
-   586 00000181 55                      push rbp
-   587 00000182 4889E5                  mov rbp, rsp
-   588 00000185 4883EC20                sub rsp, 32
-   589                                 
-   590 00000189 803C25[00000000]0F      cmp byte [correct_count], 15
-   591 00000191 7D3C                    jge opt3_correct
-   592                                 
-   593 00000193 488D0C25[00000000]      lea rcx, [grade_fmt]
-   594 0000019B 488D1425[00000000]      lea rdx, [file_name]
-   595 000001A3 4C0FB60425[00000000]      movzx r8, byte [correct_count]
-   596 000001AC 4C0FB60C25[00000000]      movzx r9, byte [total_count]
-   597 000001B5 E8(F6FFFFFF)            call printf
-   598 000001BA 488D0C25[00000000]      lea rcx, [grade_fmt2]
-   599 000001C2 488D1425[00000000]      lea rdx, [fail]
-   600 000001CA E8(F6FFFFFF)            call printf
-   601 000001CF EB3A                    jmp opt3_end
-   602                                 
-   603                                  opt3_correct:
-   604                                 
-   605 000001D1 488D0C25[00000000]      lea rcx, [grade_fmt]
-   606 000001D9 488D1425[00000000]      lea rdx, [file_name]
-   607 000001E1 4C0FB60425[00000000]      movzx r8, byte [correct_count]
-   608 000001EA 4C0FB60C25[00000000]      movzx r9, byte [total_count]
-   609 000001F3 E8(F6FFFFFF)            call printf
-   610 000001F8 488D0C25[00000000]      lea rcx, [grade_fmt2]
-   611 00000200 488D1425[00000000]      lea rdx, [pass]
-   612 00000208 E8(F6FFFFFF)            call printf
-   613                                 
-   614                                  opt3_end:
-   615                                 
-   616 0000020D C9                      leave
-   617 0000020E C3                      ret
-   618                                 
-   619                                 _clear_buff:
-   620 0000020F 55                      push rbp
-   621 00000210 4889E5                  mov rbp,rsp
-   622 00000213 4883EC20                sub rsp, 32
-   623                                 
-   624 00000217 E8(F6FFFFFF)            call getchar
-   625                                  while:
-   626 0000021C 4883F80A                cmp rax, 0x0a
-   627 00000220 75F8                    jnz while
-   628                                 
-   629 00000222 C9                      leave
-   630 00000223 C3                      ret
+   573 0000015F 4C892C25[00000000]      mov [file_ptr], r13
+   574 00000167 4C892425[00000000]      mov [ans_file_ptr], r12
+   575                                 
+   576 0000016F 488B0C25[00000000]      mov rcx, [ans_file_ptr]
+   577 00000177 E8(F6FFFFFF)            call fclose
+   578                                 
+   579                                  opt2_end:
+   580                                 
+   581 0000017C C9                      leave
+   582 0000017D C3                      ret
+   583                                 
+   584                                 _opt3:
+   585 0000017E 55                      push rbp
+   586 0000017F 4889E5                  mov rbp, rsp
+   587 00000182 4883EC20                sub rsp, 32
+   588                                 
+   589 00000186 803C25[00000000]0F      cmp byte [correct_count], 15
+   590 0000018E 7D3C                    jge opt3_correct
+   591                                 
+   592 00000190 488D0C25[00000000]      lea rcx, [grade_fmt]
+   593 00000198 488D1425[00000000]      lea rdx, [file_name]
+   594 000001A0 4C0FB60425[00000000]      movzx r8, byte [correct_count]
+   595 000001A9 4C0FB60C25[00000000]      movzx r9, byte [total_count]
+   596 000001B2 E8(F6FFFFFF)            call printf
+   597 000001B7 488D0C25[00000000]      lea rcx, [grade_fmt2]
+   598 000001BF 488D1425[00000000]      lea rdx, [fail]
+   599 000001C7 E8(F6FFFFFF)            call printf
+   600 000001CC EB3A                    jmp opt3_end
+   601                                 
+   602                                  opt3_correct:
+   603                                 
+   604 000001CE 488D0C25[00000000]      lea rcx, [grade_fmt]
+   605 000001D6 488D1425[00000000]      lea rdx, [file_name]
+   606 000001DE 4C0FB60425[00000000]      movzx r8, byte [correct_count]
+   607 000001E7 4C0FB60C25[00000000]      movzx r9, byte [total_count]
+   608 000001F0 E8(F6FFFFFF)            call printf
+   609 000001F5 488D0C25[00000000]      lea rcx, [grade_fmt2]
+   610 000001FD 488D1425[00000000]      lea rdx, [pass]
+   611 00000205 E8(F6FFFFFF)            call printf
+   612                                 
+   613                                  opt3_end:
+   614                                 
+   615 0000020A C9                      leave
+   616 0000020B C3                      ret
+   617                                 
+   618                                 _clear_buff:
+   619 0000020C 55                      push rbp
+   620 0000020D 4889E5                  mov rbp,rsp
+   621 00000210 4883EC20                sub rsp, 32
+   622                                 
+   623 00000214 E8(F6FFFFFF)            call getchar
+   624                                  while:
+   625 00000219 4883F80A                cmp rax, 0x0a
+   626 0000021D 75F8                    jnz while
+   627                                 
+   628 0000021F C9                      leave
+   629 00000220 C3                      ret
+   630                                 
    631                                 
-   632                                 
-   633                                 main:
-   634 00000224 55                      push rbp
-   635 00000225 4889E5                  mov rbp, rsp
-   636 00000228 4883EC20                sub rsp, 32
-   637                                 
-   638 0000022C 4831C0                  xor rax,rax
-   639 0000022F 48890425[00000000]      mov [file_ptr], rax
-   640                                 
-   641                                  _control_loop:
-   642                                 
-   643 00000237 488D0C25[00000000]      lea rcx, [clear]
-   644 0000023F E8(F6FFFFFF)            call system
+   632                                 main:
+   633 00000221 55                      push rbp
+   634 00000222 4889E5                  mov rbp, rsp
+   635 00000225 4883EC20                sub rsp, 32
+   636                                 
+   637 00000229 4831C0                  xor rax,rax
+   638 0000022C 48890425[00000000]      mov [file_ptr], rax
+   639                                 
+   640                                  _control_loop:
+   641                                 
+   642 00000234 488D0C25[00000000]      lea rcx, [clear]
+   643 0000023C E8(F6FFFFFF)            call system
+   644                                 
    645                                 
-   646                                 
-   647 00000244 488D0C25[00000000]      lea rcx, [menu]
-   648 0000024C E8(F6FFFFFF)            call printf
+   646 00000241 488D0C25[00000000]      lea rcx, [menu]
+   647 00000249 E8(F6FFFFFF)            call printf
+   648                                 
    649                                 
-   650                                 
-   651 00000251 488D0C25[00000000]      lea rcx, [input_string]
-   652 00000259 48C7C2[00000000]        mov rdx, ans
-   653 00000260 E8(F6FFFFFF)            call scanf
-   654                                 
-   655                                  opt_1:
-   656 00000265 803C25[00000000]31      cmp [ans], byte '1'
-   657 0000026D 750F                    jnz opt_2
-   658 0000026F E887FDFFFF              call _opt1
-   659 00000274 E891FFFFFF              call _clear_buff
-   660 00000279 E8(F6FFFFFF)            call getchar
-   661 0000027E EBB5                    jmp _control_loop
-   662                                  opt_2:
-   663 00000280 803C25[00000000]32      cmp [ans], byte '2'
-   664 00000288 751C                    jnz opt_3
-   665 0000028A E8D6FDFFFF              call _opt2
-   666 0000028F E876FFFFFF              call _clear_buff
-   667 00000294 E8(F6FFFFFF)            call getchar
-   668 00000299 488B0C25[00000000]      mov rcx, [file_ptr]
-   669 000002A1 E8(F6FFFFFF)            call fclose
-   670 000002A6 EB8D                    jmp _control_loop
-   671                                  opt_3:
-   672 000002A8 803C25[00000000]33      cmp [ans], byte '3'
-   673 000002B0 7512                    jnz opt_4
-   674 000002B2 E8C5FEFFFF              call _opt3
-   675 000002B7 E84EFFFFFF              call _clear_buff
-   676 000002BC E8(F6FFFFFF)            call getchar
-   677 000002C1 E96CFFFFFF              jmp _control_loop
-   678                                  opt_4:
-   679 000002C6 803C25[00000000]34      cmp [ans], byte '4'
-   680 000002CE 750D                    jnz invalid_opt
-   681 000002D0 488D0C25[00000000]      lea rcx, [opt_4_ans]
-   682 000002D8 E8(F6FFFFFF)            call printf
-   683 000002DD EB1A                    jmp _end_control
-   684                                  invalid_opt:
-   685 000002DF 488D0C25[00000000]      lea rcx, [invalid_opt_ans]
-   686 000002E7 E8(F6FFFFFF)            call printf
-   687 000002EC E819FFFFFF              call _clear_buff
-   688 000002F1 E8(F6FFFFFF)            call getchar
-   689 000002F6 E937FFFFFF              jmp _control_loop
-   690                                  _end_control:
+   650 0000024E 488D0C25[00000000]      lea rcx, [input_string]
+   651 00000256 48C7C2[00000000]        mov rdx, ans
+   652 0000025D E8(F6FFFFFF)            call scanf
+   653                                 
+   654                                  opt_1:
+   655 00000262 803C25[00000000]31      cmp [ans], byte '1'
+   656 0000026A 750F                    jnz opt_2
+   657 0000026C E88AFDFFFF              call _opt1
+   658 00000271 E891FFFFFF              call _clear_buff
+   659 00000276 E8(F6FFFFFF)            call getchar
+   660 0000027B EBB5                    jmp _control_loop
+   661                                  opt_2:
+   662 0000027D 803C25[00000000]32      cmp [ans], byte '2'
+   663 00000285 751C                    jnz opt_3
+   664 00000287 E8D9FDFFFF              call _opt2
+   665 0000028C E876FFFFFF              call _clear_buff
+   666 00000291 E8(F6FFFFFF)            call getchar
+   667 00000296 488B0C25[00000000]      mov rcx, [file_ptr]
+   668 0000029E E8(F6FFFFFF)            call fclose
+   669 000002A3 EB8D                    jmp _control_loop
+   670                                  opt_3:
+   671 000002A5 803C25[00000000]33      cmp [ans], byte '3'
+   672 000002AD 7512                    jnz opt_4
+   673 000002AF E8C5FEFFFF              call _opt3
+   674 000002B4 E84EFFFFFF              call _clear_buff
+   675 000002B9 E8(F6FFFFFF)            call getchar
+   676 000002BE E96CFFFFFF              jmp _control_loop
+   677                                  opt_4:
+   678 000002C3 803C25[00000000]34      cmp [ans], byte '4'
+   679 000002CB 750D                    jnz invalid_opt
+   680 000002CD 488D0C25[00000000]      lea rcx, [opt_4_ans]
+   681 000002D5 E8(F6FFFFFF)            call printf
+   682 000002DA EB1A                    jmp _end_control
+   683                                  invalid_opt:
+   684 000002DC 488D0C25[00000000]      lea rcx, [invalid_opt_ans]
+   685 000002E4 E8(F6FFFFFF)            call printf
+   686 000002E9 E819FFFFFF              call _clear_buff
+   687 000002EE E8(F6FFFFFF)            call getchar
+   688 000002F3 E937FFFFFF              jmp _control_loop
+   689                                  _end_control:
+   690                                 
    691                                 
-   692                                 
-   693 000002FB 4831C0                  xor rax,rax
-   694 000002FE 48390425[00000000]      cmp [file_ptr], rax
-   695 00000306 74FE                    jz end
-   696                                 
-   697                                  end:
-   698                                 
-   699 00000308 4831C9                  xor rcx,rcx
-   700 0000030B E8(F6FFFFFF)            call exit
+   692 000002F8 4831C0                  xor rax,rax
+   693 000002FB 48390425[00000000]      cmp [file_ptr], rax
+   694 00000303 74FE                    jz end
+   695                                 
+   696                                  end:
+   697                                 
+   698 00000305 4831C9                  xor rcx,rcx
+   699 00000308 E8(F6FFFFFF)            call exit

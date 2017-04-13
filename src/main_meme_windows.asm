@@ -92,9 +92,8 @@ _opt2:
   mov rbp, rsp
   sub rsp, 32
 
-  xor r11,r11
-  mov [correct_count], r11
-  mov [total_count], r11
+  mov byte [correct_count], 0
+  mov byte [total_count], 0
   lea rcx, [header]
   lea rdx, [file_name]
   call printf
