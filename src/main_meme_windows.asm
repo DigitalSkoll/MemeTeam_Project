@@ -26,14 +26,13 @@ segment .data
                   INDENT,"Department of Motor Vehicles",0xa,\
                   INDENT,"Driving Exam",0xa,\
                   INDENT,"Applicant: %s",0xa,\
-                  INDENT,"Correct Answers: %d/%d",0xa,\
-                  INDENT,"Score: %s",0xa,0
+                  INDENT,"Correct Answers: %d/%d",0xa,0x0
+  grade_fmt2 db   INDENT,"Score: %s",0xa,0
   input_string db "%c",0x0
   clear db "clear",0x0
   opt_4_ans db INDENT,"Good Bye",0xa,0x0
   invalid_opt_ans db INDENT,"invalid option",0x0
   file_input db "%s",0x0
-  ;file_name times 30 db 0
   file_mode db "r",0x0
   error db "[ERROR] File Not Found",0xa,0x0
   ans_file_name db "datafiles/Answers.txt",0
@@ -64,20 +63,20 @@ _opt1:
   push rbp
   mov rbp,rsp
   opt1_start:
-  lea rdi, [opt1_prompt]
+  lea rcx, [opt1_prompt]
   call printf
-  lea rdi, [file_input]
-  mov rsi, file_name
+  lea rcx, [file_input]
+  mov rdx, file_name
   call scanf
-  lea rdi, [file_name]
-  lea rsi, [file_mode]
+  lea rcx, [file_name]
+  lea rdx, [file_mode]
   call fopen
   mov [file_ptr], rax
   xor rax,rax
   cmp [file_ptr],rax 
   jnz opt1_end
 
-  lea rdi, [error]
+  lea rcx, [error]
   call printf
   call _clear_buff
   jmp opt1_start
@@ -91,18 +90,18 @@ _opt2:
   push rbp
   mov rbp, rsp
 
-  lea rdi, [header]
-  lea rsi, [file_name]
+  lea rcx, [header]
+  lea rdx, [file_name]
   call printf
 
-  lea rdi, [ans_file_name]
-  lea rsi, [file_mode]
+  lea rcx, [ans_file_name]
+  lea rdx, [file_mode]
   call fopen
   mov [ans_file_ptr], rax
   cmp byte [ans_file_ptr], 0
   jnz opt2_next
 
-  lea rdi, [error]
+  lea rcx, [error]
   call printf
   call_clear_buff
   jmp opt2_end
@@ -113,13 +112,13 @@ _opt2:
   push r12
   push r13
   opt2_while:
-    mov rdi, [ans_file_ptr]
+    mov rcx, [ans_file_ptr]
     call fgetc
     cmp al, -1
     jz end_opt2_while
 
     mov [ans], al
-    mov rdi, [file_ptr]
+    mov rcx, [file_ptr]
     call fgetc
     cmp al, -1
     jz end_opt2_while
@@ -138,10 +137,10 @@ _opt2:
     inc byte [correct_count]
 
     opt2_skip_correct:
-    lea rdi, [cmp_fmt]
-    movzx rsi, byte [ans]
+    lea rcx, [cmp_fmt]
+    movzx rdx, byte [ans]
     mov rdx, rax
-    movzx rcx, byte [correct_char]
+    movzx r8, byte [correct_char]
     call printf
     jmp opt2_while
   end_opt2_while:
@@ -152,7 +151,7 @@ _opt2:
   mov [file_ptr], r13
   mov [ans_file_ptr], r12
 
-  mov rdi, [ans_file_ptr]
+  mov rcx, [ans_file_ptr]
   call fclose
 
   xor rdx, rdx
@@ -177,23 +176,26 @@ _opt3:
   cmp byte [correct_count], 15
   jge opt3_correct
 
-  lea rdi, [grade_fmt]
-  lea rsi, [file_name]
-  movzx rdx, byte [correct_count]
-  movzx rcx, byte [total_count]
-  lea r8, [fail]
-
+  lea rcx, [grade_fmt]
+  lea rdx, [file_name]
+  movzx r8, byte [correct_count]
+  movzx r9, byte [total_count]
+  call printf
+  lea rdi, [grade_fmt2]
+  lea rsi, [fail]
   call printf
 
   opt3_correct:
 
-  lea rdi, [grade_fmt]
-  lea rsi, [file_name]
-  movzx rdx, byte [correct_count]
-  movzx rcx, byte [total_count]
-  lea r8, [pass]
-
+  lea rcx, [grade_fmt]
+  lea rdx, [file_name]
+  movzx r8, byte [correct_count]
+  movzx r9, byte [total_count]
   call printf
+  lea rdi, [grade_fmt2]
+  lea rsi, [pass]
+  call printf
+
 
   leave
   ret
@@ -221,16 +223,16 @@ main:
   
   _control_loop:
     ; int system(const char *command
-    lea rdi, [clear]
+    lea rcx, [clear]
     call system
 
     ; int printf(const char *format, ...)
-    lea rdi, [menu]
+    lea rcx, [menu]
     call printf
 
     ; int scanf(const char *format, ...)
-    lea rdi, [input_string]
-    mov rsi, ans
+    lea rcx, [input_string]
+    mov rdx, ans
     call scanf
 
     opt_1:
@@ -257,11 +259,11 @@ main:
     opt_4:
       cmp [ans], byte '4'
       jnz invalid_opt
-      lea rdi, [opt_4_ans]
+      lea rcx, [opt_4_ans]
       call printf
       jmp _end_control
     invalid_opt:
-      lea rdi, [invalid_opt_ans]
+      lea rcx, [invalid_opt_ans]
       call printf
       call _clear_buff
       call getchar
@@ -273,10 +275,10 @@ main:
   cmp [file_ptr], rax
   jz end
 
-  mov rdi, [file_ptr]
+  mov rcx, [file_ptr]
   call fclose
 
   end:
 
-  xor rdi,rdi
+  xor rcx,rcx
   call exit
