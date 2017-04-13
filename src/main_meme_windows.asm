@@ -29,7 +29,7 @@ segment .data
                   INDENT,"Correct Answers: %d/%d",0xa,0x0
   grade_fmt2 db   INDENT,"Score: %s",0xa,0
   input_string db "%c",0x0
-  clear db "clear",0x0
+  clear db "cls",0x0
   opt_4_ans db INDENT,"Good Bye",0xa,0x0
   invalid_opt_ans db INDENT,"invalid option",0x0
   file_input db "%s",0x0
@@ -62,6 +62,7 @@ segment .text
 _opt1:
   push rbp
   mov rbp,rsp
+  sub rsp, 32
   opt1_start:
   lea rcx, [opt1_prompt]
   call printf
@@ -89,6 +90,7 @@ _opt1:
 _opt2:
   push rbp
   mov rbp, rsp
+  sub rsp, 32
 
   lea rcx, [header]
   lea rdx, [file_name]
@@ -172,6 +174,7 @@ _opt2:
 _opt3:
   push rbp
   mov rbp, rsp
+  sub rsp, 32
 
   cmp byte [correct_count], 15
   jge opt3_correct
@@ -203,6 +206,7 @@ _opt3:
 _clear_buff:
   push rbp
   mov rbp,rsp
+  sub rsp, 32
 
   call getchar
   while:
@@ -217,6 +221,7 @@ _clear_buff:
 main:
   push rbp
   mov rbp, rsp
+  sub rsp, 32
 
   xor rax,rax
   mov [file_ptr], rax
