@@ -1,0 +1,700 @@
+     1                                 %line 389+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+     2                                 
+     3                                 %line 391+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+     4                                 
+     5                                 
+     6                                 
+     7                                 
+     8                                 %line 411+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+     9                                 
+    10                                 
+    11                                 
+    12                                 
+    13                                 local1 equ 16
+    14                                 local2 equ 24
+    15                                 local3 equ 32
+    16                                 local4 equ 40
+    17                                 
+    18                                 
+    19                                 
+    20                                 
+    21                                 
+    22                                 
+    23                                 
+    24                                 
+    25                                 
+    26                                 %line 435+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+    27                                 local5 equ -8*(5-4)
+    28                                 %line 435+0 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+    29                                 local6 equ -8*(6-4)
+    30                                 local7 equ -8*(7-4)
+    31                                 local8 equ -8*(8-4)
+    32                                 local9 equ -8*(9-4)
+    33                                 local10 equ -8*(10-4)
+    34                                 local11 equ -8*(11-4)
+    35                                 local12 equ -8*(12-4)
+    36                                 local13 equ -8*(13-4)
+    37                                 local14 equ -8*(14-4)
+    38                                 local15 equ -8*(15-4)
+    39                                 local16 equ -8*(16-4)
+    40                                 local17 equ -8*(17-4)
+    41                                 local18 equ -8*(18-4)
+    42                                 local19 equ -8*(19-4)
+    43                                 local20 equ -8*(20-4)
+    44                                 local21 equ -8*(21-4)
+    45                                 local22 equ -8*(22-4)
+    46                                 local23 equ -8*(23-4)
+    47                                 local24 equ -8*(24-4)
+    48                                 local25 equ -8*(25-4)
+    49                                 local26 equ -8*(26-4)
+    50                                 local27 equ -8*(27-4)
+    51                                 local28 equ -8*(28-4)
+    52                                 local29 equ -8*(29-4)
+    53                                 local30 equ -8*(30-4)
+    54                                 local31 equ -8*(31-4)
+    55                                 local32 equ -8*(32-4)
+    56                                 local33 equ -8*(33-4)
+    57                                 local34 equ -8*(34-4)
+    58                                 local35 equ -8*(35-4)
+    59                                 local36 equ -8*(36-4)
+    60                                 local37 equ -8*(37-4)
+    61                                 local38 equ -8*(38-4)
+    62                                 local39 equ -8*(39-4)
+    63                                 local40 equ -8*(40-4)
+    64                                 local41 equ -8*(41-4)
+    65                                 local42 equ -8*(42-4)
+    66                                 local43 equ -8*(43-4)
+    67                                 local44 equ -8*(44-4)
+    68                                 local45 equ -8*(45-4)
+    69                                 local46 equ -8*(46-4)
+    70                                 local47 equ -8*(47-4)
+    71                                 local48 equ -8*(48-4)
+    72                                 local49 equ -8*(49-4)
+    73                                 local50 equ -8*(50-4)
+    74                                 local51 equ -8*(51-4)
+    75                                 local52 equ -8*(52-4)
+    76                                 local53 equ -8*(53-4)
+    77                                 local54 equ -8*(54-4)
+    78                                 local55 equ -8*(55-4)
+    79                                 local56 equ -8*(56-4)
+    80                                 local57 equ -8*(57-4)
+    81                                 local58 equ -8*(58-4)
+    82                                 local59 equ -8*(59-4)
+    83                                 local60 equ -8*(60-4)
+    84                                 local61 equ -8*(61-4)
+    85                                 local62 equ -8*(62-4)
+    86                                 local63 equ -8*(63-4)
+    87                                 local64 equ -8*(64-4)
+    88                                 local65 equ -8*(65-4)
+    89                                 local66 equ -8*(66-4)
+    90                                 local67 equ -8*(67-4)
+    91                                 local68 equ -8*(68-4)
+    92                                 local69 equ -8*(69-4)
+    93                                 local70 equ -8*(70-4)
+    94                                 local71 equ -8*(71-4)
+    95                                 local72 equ -8*(72-4)
+    96                                 local73 equ -8*(73-4)
+    97                                 local74 equ -8*(74-4)
+    98                                 local75 equ -8*(75-4)
+    99                                 local76 equ -8*(76-4)
+   100                                 local77 equ -8*(77-4)
+   101                                 local78 equ -8*(78-4)
+   102                                 local79 equ -8*(79-4)
+   103                                 local80 equ -8*(80-4)
+   104                                 local81 equ -8*(81-4)
+   105                                 local82 equ -8*(82-4)
+   106                                 local83 equ -8*(83-4)
+   107                                 local84 equ -8*(84-4)
+   108                                 local85 equ -8*(85-4)
+   109                                 local86 equ -8*(86-4)
+   110                                 local87 equ -8*(87-4)
+   111                                 local88 equ -8*(88-4)
+   112                                 local89 equ -8*(89-4)
+   113                                 local90 equ -8*(90-4)
+   114                                 local91 equ -8*(91-4)
+   115                                 local92 equ -8*(92-4)
+   116                                 local93 equ -8*(93-4)
+   117                                 local94 equ -8*(94-4)
+   118                                 local95 equ -8*(95-4)
+   119                                 local96 equ -8*(96-4)
+   120                                 local97 equ -8*(97-4)
+   121                                 local98 equ -8*(98-4)
+   122                                 local99 equ -8*(99-4)
+   123                                 local100 equ -8*(100-4)
+   124                                 local101 equ -8*(101-4)
+   125                                 local102 equ -8*(102-4)
+   126                                 local103 equ -8*(103-4)
+   127                                 local104 equ -8*(104-4)
+   128                                 %line 437+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   129                                 
+   130                                 
+   131                                 
+   132                                 
+   133                                 
+   134                                 
+   135                                 
+   136                                 
+   137                                 
+   138                                 
+   139                                 %line 454+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   140                                 newPar5 equ 8*(5-1)
+   141                                 %line 454+0 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   142                                 newPar6 equ 8*(6-1)
+   143                                 newPar7 equ 8*(7-1)
+   144                                 newPar8 equ 8*(8-1)
+   145                                 newPar9 equ 8*(9-1)
+   146                                 newPar10 equ 8*(10-1)
+   147                                 newPar11 equ 8*(11-1)
+   148                                 newPar12 equ 8*(12-1)
+   149                                 newPar13 equ 8*(13-1)
+   150                                 newPar14 equ 8*(14-1)
+   151                                 newPar15 equ 8*(15-1)
+   152                                 newPar16 equ 8*(16-1)
+   153                                 newPar17 equ 8*(17-1)
+   154                                 newPar18 equ 8*(18-1)
+   155                                 newPar19 equ 8*(19-1)
+   156                                 newPar20 equ 8*(20-1)
+   157                                 newPar21 equ 8*(21-1)
+   158                                 newPar22 equ 8*(22-1)
+   159                                 newPar23 equ 8*(23-1)
+   160                                 newPar24 equ 8*(24-1)
+   161                                 newPar25 equ 8*(25-1)
+   162                                 newPar26 equ 8*(26-1)
+   163                                 newPar27 equ 8*(27-1)
+   164                                 newPar28 equ 8*(28-1)
+   165                                 newPar29 equ 8*(29-1)
+   166                                 newPar30 equ 8*(30-1)
+   167                                 newPar31 equ 8*(31-1)
+   168                                 newPar32 equ 8*(32-1)
+   169                                 newPar33 equ 8*(33-1)
+   170                                 newPar34 equ 8*(34-1)
+   171                                 newPar35 equ 8*(35-1)
+   172                                 newPar36 equ 8*(36-1)
+   173                                 newPar37 equ 8*(37-1)
+   174                                 newPar38 equ 8*(38-1)
+   175                                 newPar39 equ 8*(39-1)
+   176                                 newPar40 equ 8*(40-1)
+   177                                 newPar41 equ 8*(41-1)
+   178                                 newPar42 equ 8*(42-1)
+   179                                 newPar43 equ 8*(43-1)
+   180                                 newPar44 equ 8*(44-1)
+   181                                 newPar45 equ 8*(45-1)
+   182                                 newPar46 equ 8*(46-1)
+   183                                 newPar47 equ 8*(47-1)
+   184                                 newPar48 equ 8*(48-1)
+   185                                 newPar49 equ 8*(49-1)
+   186                                 newPar50 equ 8*(50-1)
+   187                                 newPar51 equ 8*(51-1)
+   188                                 newPar52 equ 8*(52-1)
+   189                                 newPar53 equ 8*(53-1)
+   190                                 newPar54 equ 8*(54-1)
+   191                                 newPar55 equ 8*(55-1)
+   192                                 newPar56 equ 8*(56-1)
+   193                                 newPar57 equ 8*(57-1)
+   194                                 newPar58 equ 8*(58-1)
+   195                                 newPar59 equ 8*(59-1)
+   196                                 newPar60 equ 8*(60-1)
+   197                                 newPar61 equ 8*(61-1)
+   198                                 newPar62 equ 8*(62-1)
+   199                                 newPar63 equ 8*(63-1)
+   200                                 newPar64 equ 8*(64-1)
+   201                                 newPar65 equ 8*(65-1)
+   202                                 newPar66 equ 8*(66-1)
+   203                                 newPar67 equ 8*(67-1)
+   204                                 newPar68 equ 8*(68-1)
+   205                                 newPar69 equ 8*(69-1)
+   206                                 newPar70 equ 8*(70-1)
+   207                                 newPar71 equ 8*(71-1)
+   208                                 newPar72 equ 8*(72-1)
+   209                                 newPar73 equ 8*(73-1)
+   210                                 newPar74 equ 8*(74-1)
+   211                                 newPar75 equ 8*(75-1)
+   212                                 newPar76 equ 8*(76-1)
+   213                                 newPar77 equ 8*(77-1)
+   214                                 newPar78 equ 8*(78-1)
+   215                                 newPar79 equ 8*(79-1)
+   216                                 newPar80 equ 8*(80-1)
+   217                                 newPar81 equ 8*(81-1)
+   218                                 newPar82 equ 8*(82-1)
+   219                                 newPar83 equ 8*(83-1)
+   220                                 newPar84 equ 8*(84-1)
+   221                                 newPar85 equ 8*(85-1)
+   222                                 newPar86 equ 8*(86-1)
+   223                                 newPar87 equ 8*(87-1)
+   224                                 newPar88 equ 8*(88-1)
+   225                                 newPar89 equ 8*(89-1)
+   226                                 newPar90 equ 8*(90-1)
+   227                                 newPar91 equ 8*(91-1)
+   228                                 newPar92 equ 8*(92-1)
+   229                                 newPar93 equ 8*(93-1)
+   230                                 newPar94 equ 8*(94-1)
+   231                                 newPar95 equ 8*(95-1)
+   232                                 newPar96 equ 8*(96-1)
+   233                                 newPar97 equ 8*(97-1)
+   234                                 newPar98 equ 8*(98-1)
+   235                                 newPar99 equ 8*(99-1)
+   236                                 newPar100 equ 8*(100-1)
+   237                                 %line 456+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   238                                 
+   239                                 
+   240                                 
+   241                                 
+   242                                 
+   243                                 
+   244                                 
+   245                                 
+   246                                 
+   247                                 
+   248                                 
+   249                                 %line 470+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   250                                 
+   251                                 %line 475+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   252                                 currPar5 equ 16+8*(5+1)
+   253                                 %line 475+0 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   254                                 currPar6 equ 16+8*(6+1)
+   255                                 currPar7 equ 16+8*(7+1)
+   256                                 currPar8 equ 16+8*(8+1)
+   257                                 currPar9 equ 16+8*(9+1)
+   258                                 currPar10 equ 16+8*(10+1)
+   259                                 currPar11 equ 16+8*(11+1)
+   260                                 currPar12 equ 16+8*(12+1)
+   261                                 currPar13 equ 16+8*(13+1)
+   262                                 currPar14 equ 16+8*(14+1)
+   263                                 currPar15 equ 16+8*(15+1)
+   264                                 currPar16 equ 16+8*(16+1)
+   265                                 currPar17 equ 16+8*(17+1)
+   266                                 currPar18 equ 16+8*(18+1)
+   267                                 currPar19 equ 16+8*(19+1)
+   268                                 currPar20 equ 16+8*(20+1)
+   269                                 currPar21 equ 16+8*(21+1)
+   270                                 currPar22 equ 16+8*(22+1)
+   271                                 currPar23 equ 16+8*(23+1)
+   272                                 currPar24 equ 16+8*(24+1)
+   273                                 currPar25 equ 16+8*(25+1)
+   274                                 currPar26 equ 16+8*(26+1)
+   275                                 currPar27 equ 16+8*(27+1)
+   276                                 currPar28 equ 16+8*(28+1)
+   277                                 currPar29 equ 16+8*(29+1)
+   278                                 currPar30 equ 16+8*(30+1)
+   279                                 currPar31 equ 16+8*(31+1)
+   280                                 currPar32 equ 16+8*(32+1)
+   281                                 currPar33 equ 16+8*(33+1)
+   282                                 currPar34 equ 16+8*(34+1)
+   283                                 currPar35 equ 16+8*(35+1)
+   284                                 currPar36 equ 16+8*(36+1)
+   285                                 currPar37 equ 16+8*(37+1)
+   286                                 currPar38 equ 16+8*(38+1)
+   287                                 currPar39 equ 16+8*(39+1)
+   288                                 currPar40 equ 16+8*(40+1)
+   289                                 currPar41 equ 16+8*(41+1)
+   290                                 currPar42 equ 16+8*(42+1)
+   291                                 currPar43 equ 16+8*(43+1)
+   292                                 currPar44 equ 16+8*(44+1)
+   293                                 currPar45 equ 16+8*(45+1)
+   294                                 currPar46 equ 16+8*(46+1)
+   295                                 currPar47 equ 16+8*(47+1)
+   296                                 currPar48 equ 16+8*(48+1)
+   297                                 currPar49 equ 16+8*(49+1)
+   298                                 currPar50 equ 16+8*(50+1)
+   299                                 currPar51 equ 16+8*(51+1)
+   300                                 currPar52 equ 16+8*(52+1)
+   301                                 currPar53 equ 16+8*(53+1)
+   302                                 currPar54 equ 16+8*(54+1)
+   303                                 currPar55 equ 16+8*(55+1)
+   304                                 currPar56 equ 16+8*(56+1)
+   305                                 currPar57 equ 16+8*(57+1)
+   306                                 currPar58 equ 16+8*(58+1)
+   307                                 currPar59 equ 16+8*(59+1)
+   308                                 currPar60 equ 16+8*(60+1)
+   309                                 currPar61 equ 16+8*(61+1)
+   310                                 currPar62 equ 16+8*(62+1)
+   311                                 currPar63 equ 16+8*(63+1)
+   312                                 currPar64 equ 16+8*(64+1)
+   313                                 currPar65 equ 16+8*(65+1)
+   314                                 currPar66 equ 16+8*(66+1)
+   315                                 currPar67 equ 16+8*(67+1)
+   316                                 currPar68 equ 16+8*(68+1)
+   317                                 currPar69 equ 16+8*(69+1)
+   318                                 currPar70 equ 16+8*(70+1)
+   319                                 currPar71 equ 16+8*(71+1)
+   320                                 currPar72 equ 16+8*(72+1)
+   321                                 currPar73 equ 16+8*(73+1)
+   322                                 currPar74 equ 16+8*(74+1)
+   323                                 currPar75 equ 16+8*(75+1)
+   324                                 currPar76 equ 16+8*(76+1)
+   325                                 currPar77 equ 16+8*(77+1)
+   326                                 currPar78 equ 16+8*(78+1)
+   327                                 currPar79 equ 16+8*(79+1)
+   328                                 currPar80 equ 16+8*(80+1)
+   329                                 currPar81 equ 16+8*(81+1)
+   330                                 currPar82 equ 16+8*(82+1)
+   331                                 currPar83 equ 16+8*(83+1)
+   332                                 currPar84 equ 16+8*(84+1)
+   333                                 currPar85 equ 16+8*(85+1)
+   334                                 currPar86 equ 16+8*(86+1)
+   335                                 currPar87 equ 16+8*(87+1)
+   336                                 currPar88 equ 16+8*(88+1)
+   337                                 currPar89 equ 16+8*(89+1)
+   338                                 currPar90 equ 16+8*(90+1)
+   339                                 currPar91 equ 16+8*(91+1)
+   340                                 currPar92 equ 16+8*(92+1)
+   341                                 currPar93 equ 16+8*(93+1)
+   342                                 currPar94 equ 16+8*(94+1)
+   343                                 currPar95 equ 16+8*(95+1)
+   344                                 currPar96 equ 16+8*(96+1)
+   345                                 currPar97 equ 16+8*(97+1)
+   346                                 currPar98 equ 16+8*(98+1)
+   347                                 currPar99 equ 16+8*(99+1)
+   348                                 currPar100 equ 16+8*(100+1)
+   349                                 %line 477+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   350                                 
+   351                                 %line 555+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   352                                 
+   353                                 %line 562+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   354                                 
+   355                                 %line 569+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   356                                 
+   357                                 %line 574+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   358                                 
+   359                                 %line 579+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   360                                 
+   361                                 %line 584+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   362                                 
+   363                                 %line 589+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   364                                 
+   365                                 %line 593+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   366                                 
+   367                                 %line 597+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   368                                 
+   369                                 %line 600+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   370                                 
+   371                                 %line 608+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   372                                 
+   373                                 %line 619+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   374                                 
+   375                                 %line 624+1 C:\Users\vb248\Desktop\MemeTeam_Project-master\src\ebe.inc
+   376                                 
+   377                                 %line 1+1 C:/Users/vb248/Desktop/MemeTeam_Project-master/src/main_meme_windows.asm
+   378                                 
+   379                                 
+   380                                 
+   381                                 
+   382                                 
+   383                                 [segment .data]
+   384                                 %line 15+1 C:/Users/vb248/Desktop/MemeTeam_Project-master/src/main_meme_windows.asm
+   385 00000000 090909535441544520-     menu db 0x9,0x9,0x9,"STATE DMV DRIVERS EXAMINATION",0xa, 0x9,0x9,0x9,"-----------------------------",0xa, 0x9,0x9,0x9,"1. Enter Applicant Data File Name",0xa, 0x9,0x9,0x9,"2. Grade Applicant Examination",0xa, 0x9,0x9,0x9,"3. Display Applicant Results",0xa, 0x9,0x9,0x9,"4. Exit The Program",0xa, 0x9,0x9,0x9,"-----------------------------",0xa, 0x9,0x9,0x9,"Enter Option 1, 2, 3, or 4: ", 0x0
+   386 00000000 444D56204452495645-
+   387 00000000 5253204558414D494E-
+   388 00000000 4154494F4E0A090909-
+   389 00000000 2D2D2D2D2D2D2D2D2D-
+   390 00000000 2D2D2D2D2D2D2D2D2D-
+   391 00000000 2D2D2D2D2D2D2D2D2D-
+   392 00000000 2D2D0A090909312E20-
+   393 00000000 456E74657220417070-
+   394 00000000 6C6963616E74204461-
+   395 00000000 74612046696C65204E-
+   396 00000000 616D650A090909322E-
+   397 00000000 204772616465204170-
+   398 00000000 706C6963616E742045-
+   399 00000000 78616D696E6174696F-
+   400 00000000 6E0A090909332E2044-
+   401 00000000 6973706C6179204170-
+   402 00000000 706C6963616E742052-
+   403 00000000 6573756C74730A0909-
+   404 00000000 09342E204578697420-
+   405 00000000 5468652050726F6772-
+   406 00000000 616D0A0909092D2D2D-
+   407 00000000 2D2D2D2D2D2D2D2D2D-
+   408 00000000 2D2D2D2D2D2D2D2D2D-
+   409 00000000 2D2D2D2D2D2D2D2D0A-
+   410 00000000 090909456E74657220-
+   411 00000000 4F7074696F6E20312C-
+   412 00000000 20322C20332C206F72-
+   413 00000000 20343A2000         
+   414                                 %line 19+1 C:/Users/vb248/Desktop/MemeTeam_Project-master/src/main_meme_windows.asm
+   415 00000101 0A0A0A090909417070-     header db 0xa,0xa,0xa, 0x9,0x9,0x9,"Applicant %s",0xa,0xa, 0x9,0x9,0x9," DMV     Applicant",0xa, 0x9,0x9,0x9,"-------------------",0xa,0xa,0xa,0
+   416 00000101 6C6963616E74202573-
+   417 00000101 0A0A09090920444D56-
+   418 00000101 20202020204170706C-
+   419 00000101 6963616E740A090909-
+   420 00000101 2D2D2D2D2D2D2D2D2D-
+   421 00000101 2D2D2D2D2D2D2D2D2D-
+   422 00000101 2D0A0A0A00         
+   423 00000145 090909202563202020-     cmp_fmt db 0x9,0x9,0x9," %c       %c %c",0xa,0
+   424 00000145 202020202563202563-
+   425 00000145 0A00               
+   426 00000159 00                      correct_count db 0
+   427 0000015A 00                      total_count db 0
+   428 0000015B 5041535300              pass db "PASS",0
+   429 00000160 4641494C00              fail db "FAIL",0
+   430                                 %line 29+1 C:/Users/vb248/Desktop/MemeTeam_Project-master/src/main_meme_windows.asm
+   431 00000165 0A0909094465706172-     grade_fmt db 0xa, 0x9,0x9,0x9,"Department of Motor Vehicles",0xa, 0x9,0x9,0x9,"Driving Exam",0xa, 0x9,0x9,0x9,"Applicant: %s",0xa, 0x9,0x9,0x9,"Correct Answers: %d/%d",0xa,0x0
+   432 00000165 746D656E74206F6620-
+   433 00000165 4D6F746F7220566568-
+   434 00000165 69636C65730A090909-
+   435 00000165 44726976696E672045-
+   436 00000165 78616D0A0909094170-
+   437 00000165 706C6963616E743A20-
+   438 00000165 25730A090909436F72-
+   439 00000165 7265637420416E7377-
+   440 00000165 6572733A2025642F25-
+   441 00000165 640A00             
+   442 000001C2 09090953636F72653A-     grade_fmt2 db 0x9,0x9,0x9,"Score: %s",0xa,0
+   443 000001C2 2025730A00         
+   444 000001D0 256300                  input_string db "%c",0x0
+   445 000001D3 636C7300                clear db "cls",0x0
+   446 000001D7 090909476F6F642042-     opt_4_ans db 0x9,0x9,0x9,"Good Bye",0xa,0x0
+   447 000001D7 79650A00           
+   448 000001E4 090909696E76616C69-     invalid_opt_ans db 0x9,0x9,0x9,"invalid option",0x0
+   449 000001E4 64206F7074696F6E00 
+   450 000001F6 257300                  file_input db "%s",0x0
+   451 000001F9 7200                    file_mode db "r",0x0
+   452 000001FB 5B4552524F525D2046-     error db "[ERROR] File Not Found",0xa,0x0
+   453 000001FB 696C65204E6F742046-
+   454 000001FB 6F756E640A00       
+   455 00000213 6461746166696C6573-     ans_file_name db "datafiles/Answers.txt",0
+   456 00000213 2F416E73776572732E-
+   457 00000213 74787400           
+   458 00000229 090909456E74657220-     opt1_prompt db 0x9,0x9,0x9,"Enter file name: ",0x0
+   459 00000229 66696C65206E616D65-
+   460 00000229 3A2000             
+   461                                 
+   462                                 
+   463                                 [segment .bss]
+   464 00000000 <gap>                   ans resb 1
+   465 00000001 <gap>                   file_name resb 32
+   466 00000021 <gap>                   file_ptr resq 1
+   467 00000029 <gap>                   ans_file_ptr resq 1
+   468 00000031 <gap>                   correct_char resb 1
+   469                                 
+   470                                 [segment .text]
+   471                                 
+   472                                 [global main]
+   473                                 [extern system]
+   474                                 [extern printf]
+   475                                 [extern getchar]
+   476                                 [extern scanf]
+   477                                 [extern fopen]
+   478                                 [extern fclose]
+   479                                 [extern fgetc]
+   480                                 [extern putchar]
+   481                                 [extern exit]
+   482                                 
+   483                                 _opt1:
+   484 00000000 55                      push rbp
+   485 00000001 4889E5                  mov rbp,rsp
+   486 00000004 4883EC20                sub rsp, 32
+   487                                  opt1_start:
+   488 00000008 488D0C25[00000000]      lea rcx, [opt1_prompt]
+   489 00000010 E8(F6FFFFFF)            call printf
+   490 00000015 488D0C25[00000000]      lea rcx, [file_input]
+   491 0000001D 488D1425[00000000]      lea rdx, [file_name]
+   492 00000025 E8(F6FFFFFF)            call scanf
+   493 0000002A 488D0C25[00000000]      lea rcx, [file_name]
+   494 00000032 488D1425[00000000]      lea rdx, [file_mode]
+   495 0000003A E8(F6FFFFFF)            call fopen
+   496 0000003F 48890425[00000000]      mov [file_ptr], rax
+   497 00000047 4831C0                  xor rax,rax
+   498 0000004A 48390425[00000000]      cmp [file_ptr],rax
+   499 00000052 7512                    jnz opt1_end
+   500                                 
+   501 00000054 488D0C25[00000000]      lea rcx, [error]
+   502 0000005C E8(F6FFFFFF)            call printf
+   503 00000061 E8A4010000              call _clear_buff
+   504 00000066 EB9E                    jmp opt1_start
+   505                                 
+   506                                  opt1_end:
+   507                                 
+   508 00000068 C9                      leave
+   509 00000069 C3                      ret
+   510                                 
+   511                                 _opt2:
+   512 0000006A 55                      push rbp
+   513 0000006B 4889E5                  mov rbp, rsp
+   514 0000006E 4883EC20                sub rsp, 32
+   515                                 
+   516 00000072 4D31DB                  xor r11,r11
+   517 00000075 4C891C25[00000000]      mov [correct_count], r11
+   518 0000007D 4C891C25[00000000]      mov [total_count], r11
+   519 00000085 488D0C25[00000000]      lea rcx, [header]
+   520 0000008D 488D1425[00000000]      lea rdx, [file_name]
+   521 00000095 E8(F6FFFFFF)            call printf
+   522                                 
+   523 0000009A 488D0C25[00000000]      lea rcx, [ans_file_name]
+   524 000000A2 488D1425[00000000]      lea rdx, [file_mode]
+   525 000000AA E8(F6FFFFFF)            call fopen
+   526 000000AF 48890425[00000000]      mov [ans_file_ptr], rax
+   527 000000B7 803C25[00000000]00      cmp byte [ans_file_ptr], 0
+   528 000000BF 7515                    jnz opt2_next
+   529                                 
+   530 000000C1 488D0C25[00000000]      lea rcx, [error]
+   531 000000C9 E8(F6FFFFFF)            call printf
+   532 000000CE E837010000              call _clear_buff
+   533 000000D3 E9A2000000              jmp opt2_end
+   534                                  opt2_next:
+   535                                 
+   536 000000D8 4C8B2425[00000000]      mov r12, [ans_file_ptr]
+   537 000000E0 4C8B2C25[00000000]      mov r13, [file_ptr]
+   538                                 
+   539                                  opt2_while:
+   540 000000E8 488B0C25[00000000]      mov rcx, [ans_file_ptr]
+   541 000000F0 E8(F6FFFFFF)            call fgetc
+   542 000000F5 3CFF                    cmp al, -1
+   543 000000F7 7467                    jz end_opt2_while
+   544                                 
+   545 000000F9 880425[00000000]        mov [ans], al
+   546 00000100 488B0C25[00000000]      mov rcx, [file_ptr]
+   547 00000108 E8(F6FFFFFF)            call fgetc
+   548 0000010D 3CFF                    cmp al, -1
+   549 0000010F 744F                    jz end_opt2_while
+   550 00000111 3C0A                    cmp al, 0xa
+   551 00000113 74D1                    je opt2_while
+   552                                 
+   553 00000115 FE0425[00000000]        inc byte [total_count]
+   554 0000011C 380425[00000000]        cmp byte [ans], al
+   555 00000123 7408                    je opt2_correct
+   556                                 
+   557 00000125 C60425[00000000]78      mov byte [correct_char], 120
+   558 0000012D EB0D                    jmp opt2_skip_correct
+   559                                 
+   560                                  opt2_correct:
+   561 0000012F C60425[00000000]20      mov byte [correct_char], 32
+   562 00000137 FE0425[00000000]        inc byte [correct_count]
+   563                                 
+   564                                  opt2_skip_correct:
+   565 0000013E 488D0C25[00000000]      lea rcx, [cmp_fmt]
+   566 00000146 480FB61425[00000000]      movzx rdx, byte [ans]
+   567 0000014F 4989C0                  mov r8, rax
+   568 00000152 4C0FB60C25[00000000]      movzx r9, byte [correct_char]
+   569 0000015B E8(F6FFFFFF)            call printf
+   570 00000160 EB84                    jmp opt2_while
+   571                                  end_opt2_while:
+   572                                 
+   573                                 
+   574 00000162 4C892C25[00000000]      mov [file_ptr], r13
+   575 0000016A 4C892425[00000000]      mov [ans_file_ptr], r12
+   576                                 
+   577 00000172 488B0C25[00000000]      mov rcx, [ans_file_ptr]
+   578 0000017A E8(F6FFFFFF)            call fclose
+   579                                 
+   580                                  opt2_end:
+   581                                 
+   582 0000017F C9                      leave
+   583 00000180 C3                      ret
+   584                                 
+   585                                 _opt3:
+   586 00000181 55                      push rbp
+   587 00000182 4889E5                  mov rbp, rsp
+   588 00000185 4883EC20                sub rsp, 32
+   589                                 
+   590 00000189 803C25[00000000]0F      cmp byte [correct_count], 15
+   591 00000191 7D3C                    jge opt3_correct
+   592                                 
+   593 00000193 488D0C25[00000000]      lea rcx, [grade_fmt]
+   594 0000019B 488D1425[00000000]      lea rdx, [file_name]
+   595 000001A3 4C0FB60425[00000000]      movzx r8, byte [correct_count]
+   596 000001AC 4C0FB60C25[00000000]      movzx r9, byte [total_count]
+   597 000001B5 E8(F6FFFFFF)            call printf
+   598 000001BA 488D0C25[00000000]      lea rcx, [grade_fmt2]
+   599 000001C2 488D1425[00000000]      lea rdx, [fail]
+   600 000001CA E8(F6FFFFFF)            call printf
+   601 000001CF EB3A                    jmp opt3_end
+   602                                 
+   603                                  opt3_correct:
+   604                                 
+   605 000001D1 488D0C25[00000000]      lea rcx, [grade_fmt]
+   606 000001D9 488D1425[00000000]      lea rdx, [file_name]
+   607 000001E1 4C0FB60425[00000000]      movzx r8, byte [correct_count]
+   608 000001EA 4C0FB60C25[00000000]      movzx r9, byte [total_count]
+   609 000001F3 E8(F6FFFFFF)            call printf
+   610 000001F8 488D0C25[00000000]      lea rcx, [grade_fmt2]
+   611 00000200 488D1425[00000000]      lea rdx, [pass]
+   612 00000208 E8(F6FFFFFF)            call printf
+   613                                 
+   614                                  opt3_end:
+   615                                 
+   616 0000020D C9                      leave
+   617 0000020E C3                      ret
+   618                                 
+   619                                 _clear_buff:
+   620 0000020F 55                      push rbp
+   621 00000210 4889E5                  mov rbp,rsp
+   622 00000213 4883EC20                sub rsp, 32
+   623                                 
+   624 00000217 E8(F6FFFFFF)            call getchar
+   625                                  while:
+   626 0000021C 4883F80A                cmp rax, 0x0a
+   627 00000220 75F8                    jnz while
+   628                                 
+   629 00000222 C9                      leave
+   630 00000223 C3                      ret
+   631                                 
+   632                                 
+   633                                 main:
+   634 00000224 55                      push rbp
+   635 00000225 4889E5                  mov rbp, rsp
+   636 00000228 4883EC20                sub rsp, 32
+   637                                 
+   638 0000022C 4831C0                  xor rax,rax
+   639 0000022F 48890425[00000000]      mov [file_ptr], rax
+   640                                 
+   641                                  _control_loop:
+   642                                 
+   643 00000237 488D0C25[00000000]      lea rcx, [clear]
+   644 0000023F E8(F6FFFFFF)            call system
+   645                                 
+   646                                 
+   647 00000244 488D0C25[00000000]      lea rcx, [menu]
+   648 0000024C E8(F6FFFFFF)            call printf
+   649                                 
+   650                                 
+   651 00000251 488D0C25[00000000]      lea rcx, [input_string]
+   652 00000259 48C7C2[00000000]        mov rdx, ans
+   653 00000260 E8(F6FFFFFF)            call scanf
+   654                                 
+   655                                  opt_1:
+   656 00000265 803C25[00000000]31      cmp [ans], byte '1'
+   657 0000026D 750F                    jnz opt_2
+   658 0000026F E887FDFFFF              call _opt1
+   659 00000274 E891FFFFFF              call _clear_buff
+   660 00000279 E8(F6FFFFFF)            call getchar
+   661 0000027E EBB5                    jmp _control_loop
+   662                                  opt_2:
+   663 00000280 803C25[00000000]32      cmp [ans], byte '2'
+   664 00000288 751C                    jnz opt_3
+   665 0000028A E8D6FDFFFF              call _opt2
+   666 0000028F E876FFFFFF              call _clear_buff
+   667 00000294 E8(F6FFFFFF)            call getchar
+   668 00000299 488B0C25[00000000]      mov rcx, [file_ptr]
+   669 000002A1 E8(F6FFFFFF)            call fclose
+   670 000002A6 EB8D                    jmp _control_loop
+   671                                  opt_3:
+   672 000002A8 803C25[00000000]33      cmp [ans], byte '3'
+   673 000002B0 7512                    jnz opt_4
+   674 000002B2 E8C5FEFFFF              call _opt3
+   675 000002B7 E84EFFFFFF              call _clear_buff
+   676 000002BC E8(F6FFFFFF)            call getchar
+   677 000002C1 E96CFFFFFF              jmp _control_loop
+   678                                  opt_4:
+   679 000002C6 803C25[00000000]34      cmp [ans], byte '4'
+   680 000002CE 750D                    jnz invalid_opt
+   681 000002D0 488D0C25[00000000]      lea rcx, [opt_4_ans]
+   682 000002D8 E8(F6FFFFFF)            call printf
+   683 000002DD EB1A                    jmp _end_control
+   684                                  invalid_opt:
+   685 000002DF 488D0C25[00000000]      lea rcx, [invalid_opt_ans]
+   686 000002E7 E8(F6FFFFFF)            call printf
+   687 000002EC E819FFFFFF              call _clear_buff
+   688 000002F1 E8(F6FFFFFF)            call getchar
+   689 000002F6 E937FFFFFF              jmp _control_loop
+   690                                  _end_control:
+   691                                 
+   692                                 
+   693 000002FB 4831C0                  xor rax,rax
+   694 000002FE 48390425[00000000]      cmp [file_ptr], rax
+   695 00000306 74FE                    jz end
+   696                                 
+   697                                  end:
+   698                                 
+   699 00000308 4831C9                  xor rcx,rcx
+   700 0000030B E8(F6FFFFFF)            call exit

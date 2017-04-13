@@ -4,7 +4,7 @@
 ;
 
 segment .data
-  %define INDENT 0x9,0x9,0x9,0x9
+  %define INDENT 0x9,0x9,0x9
   menu         db INDENT,"STATE DMV DRIVERS EXAMINATION",0xa,\
                   INDENT,"-----------------------------",0xa,\
                   INDENT,"1. Enter Applicant Data File Name",0xa,\
@@ -67,7 +67,7 @@ _opt1:
   lea rcx, [opt1_prompt]
   call printf
   lea rcx, [file_input]
-  mov rdx, file_name
+  lea rdx, [file_name]
   call scanf
   lea rcx, [file_name]
   lea rdx, [file_mode]
@@ -92,6 +92,9 @@ _opt2:
   mov rbp, rsp
   sub rsp, 32
 
+  xor r11,r11
+  mov [correct_count], r11
+  mov [total_count], r11
   lea rcx, [header]
   lea rdx, [file_name]
   call printf
@@ -105,14 +108,13 @@ _opt2:
 
   lea rcx, [error]
   call printf
-  call_clear_buff
+  call _clear_buff
   jmp opt2_end
   opt2_next:
 
   mov r12, [ans_file_ptr]
   mov r13, [file_ptr]
-  push r12
-  push r13
+
   opt2_while:
     mov rcx, [ans_file_ptr]
     call fgetc
@@ -141,30 +143,18 @@ _opt2:
     opt2_skip_correct:
     lea rcx, [cmp_fmt]
     movzx rdx, byte [ans]
-    mov rdx, rax
-    movzx r8, byte [correct_char]
+    mov r8, rax
+    movzx r9, byte [correct_char]
     call printf
     jmp opt2_while
   end_opt2_while:
 
-  pop r13
-  pop r12
 
   mov [file_ptr], r13
   mov [ans_file_ptr], r12
 
   mov rcx, [ans_file_ptr]
   call fclose
-
-  xor rdx, rdx
-  movzx rax, byte [total_count]
-  mov rbx, 2
-  div rbx
-  mov byte [total_count], al
-
-  movzx rax, byte [correct_count]
-  sub al, byte [total_count]
-  mov byte [correct_count], al
 
   opt2_end:
 
@@ -184,9 +174,10 @@ _opt3:
   movzx r8, byte [correct_count]
   movzx r9, byte [total_count]
   call printf
-  lea rdi, [grade_fmt2]
-  lea rsi, [fail]
+  lea rcx, [grade_fmt2]
+  lea rdx, [fail]
   call printf
+  jmp opt3_end
 
   opt3_correct:
 
@@ -195,10 +186,11 @@ _opt3:
   movzx r8, byte [correct_count]
   movzx r9, byte [total_count]
   call printf
-  lea rdi, [grade_fmt2]
-  lea rsi, [pass]
+  lea rcx, [grade_fmt2]
+  lea rdx, [pass]
   call printf
 
+  opt3_end:
 
   leave
   ret
@@ -213,8 +205,7 @@ _clear_buff:
     cmp rax, 0x0a
     jnz while
 
-  mov rsp,rbp
-  pop rbp
+  leave
   ret
 
 
@@ -253,6 +244,8 @@ main:
       call _opt2
       call _clear_buff
       call getchar
+      mov rcx, [file_ptr]
+      call fclose
       jmp _control_loop
     opt_3:
       cmp [ans], byte '3'
@@ -279,9 +272,6 @@ main:
   xor rax,rax
   cmp [file_ptr], rax
   jz end
-
-  mov rcx, [file_ptr]
-  call fclose
 
   end:
 
