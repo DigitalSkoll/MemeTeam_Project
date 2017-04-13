@@ -41,7 +41,7 @@ segment .data
 
 segment .bss
   ans resb 1
-  file_name resq 1
+  file_name resb 32
   file_ptr resq 1
   ans_file_ptr resq 1
   correct_char resb 1
